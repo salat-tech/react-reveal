@@ -7,7 +7,7 @@ const replace = require('gulp-replace');
 
 gulp.task('build', () =>
   gulp.src('./src/**/*.js')
-    // .pipe(flatten())
+    .pipe(flatten())
     .pipe(replace("from './lib/", "from './"))
     .pipe(replace("from './in-and-out/", "from './"))
     .pipe(replace("from '../RevealBase';", "from './RevealBase';"))
